@@ -224,9 +224,7 @@ server <- function(input, output) {
       }
       isolate(x <- c(input$cost1,input$cost2,input$cost3,input$cost4,input$cost5,input$cost6,input$cost7,input$cost8,input$cost9))
       isolate(labs <- c("Food and Beverage","Transportation","Clothing And Shoes","Sports And Leisure","Groceries","Entertainment","Utilities","Rent","Others"))
-      isolate(piepercent<- round(100*x/sum(x), 1))
-      isolate(pie(x,piepercent,main = "Cost Ratio",col = terrain.colors(length(x))))
-      isolate(legend("topright",labs, cex = 0.8, fill = terrain.colors(length(x))))
+      barplot(x,labs,"Monthly Cost",col =  terrain.colors(length(x)) )
     })
 }
 
