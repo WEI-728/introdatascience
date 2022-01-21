@@ -1196,7 +1196,6 @@ server <- function(input, output) {
     if(input$Criteria4 == "Actual"){
       dataset <- select(dataset,c("Total",contains("Actual")))
       dataset <- dataset[, which(names(dataset) != "Total Actual")]
-      round_df(dataset)
     }else if(input$Criteria4 == "Budget"){
       dataset <- select(dataset,c("Total",contains("Budget")))
       dataset <- dataset[, which(names(dataset) != "Total Budget")]
