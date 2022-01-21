@@ -10,7 +10,6 @@ library(shinyjs)
 library(tidyr)
 library(tibble)
 library(plotly)
-library(forestmangr)
 
 #header----
 header <- dashboardHeader(title = "Personal Finance")
